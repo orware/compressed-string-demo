@@ -1,0 +1,6 @@
+{
+    "require": {
+        "orware/compressed-string": "^1.0",
+        "maxakawizard/json-collection-parser": "^1.1"
+    }
+}
