@@ -1,6 +1,16 @@
 # compressed-string-demo
 Repository with a more detailed use case to demonstrate memory differences between using regular PHP arrays, JSON strings, and the compressed-string package.
 
+You can clone this repository and do a composer install on your end to bring down the need compressed-string package (there's a JSON streaming parser that's currently included as well in the composer file but it's not actually needed.
+
+You can run the tests by opening up any of the test pages in the browser (each of these will currently run the tests 100 times using all records in the shakespeare.db database):
+* tests_php_array.php
+* tests_json_string.php
+* tests_compressed_string_level_1.php
+* tests_compressed_string_level_6.php
+
+You can tweak the query on the last line of the includes.php file if you want to change the number of records retrieved (111,396 records total). A commented out example is shown there as well.
+
 ### Average Execution Time (in seconds) Data:
 
 | Test Type	| Average of Execution Time (in seconds) (1K Records) |

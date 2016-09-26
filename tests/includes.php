@@ -49,3 +49,4 @@ function formatBytes($size, $precision = 4)
 }
 
 $shakespeare_query = 'SELECT * FROM shakespeare';
+//$shakespeare_query = 'SELECT * FROM shakespeare WHERE line_id <= 100000';
