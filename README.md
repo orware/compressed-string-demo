@@ -3,7 +3,7 @@ Repository with a more detailed use case to demonstrate memory differences betwe
 
 ### Purpose:
 
-After spending a number of weeks working eventually to creating the Compressed String Package (https://github.com/orware/compressed-string) I wanted to come up with a more detailed example to demonstrate more of what I saw when I was doing my development work.
+After spending a number of weeks working, eventually creating the Compressed String Package (https://github.com/orware/compressed-string), I wanted to come up with a more detailed example to demonstrate more of what I saw when I was doing my development work.
 
 Essentially, I was initially using PHP arrays and then just started noticing the crazy amount of memory usage that resulted in when I was pulling down a large data set.
 
