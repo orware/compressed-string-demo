@@ -48,5 +48,5 @@ function formatBytes($size, $precision = 4)
 	return round(pow(1024, $base - floor($base)), $precision) .' '. $suffixes[floor($base)];
 }
 
-$shakespeare_query = 'SELECT * FROM shakespeare';
+$shakespeare_query = 'SELECT * FROM shakespeare WHERE line_id <= 100000';
 //$shakespeare_query = 'SELECT * FROM shakespeare WHERE line_id <= 100000';

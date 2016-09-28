@@ -24,6 +24,8 @@ You can clone this repository and do a composer install on your end to bring dow
 You can run the tests by opening up any of the test pages in the browser (each of these will currently run the tests 100 times using all records in the shakespeare.db database):
 * tests_php_array.php
 * tests_json_string.php
+* tests_gzencode_json_string_level_1.php
+* tests_gzencode_json_string_level_6.php
 * tests_compressed_string_level_1.php
 * tests_compressed_string_level_6.php
 
@@ -45,6 +47,8 @@ You can tweak the query on the last line of the includes.php file if you want to
 | --------- | -------------------------------------- |
 | php_array	| 0.413181319236755 |
 | json_string	| 0.991686592102051 |
+| gzencode_json_string_level_1	| 1.194389389 |
+| gzencode_json_string_level_6	| 1.520912058 |
 | compressed_string_level_1	| 1.788661122322080 |
 | compressed_string_level_6	| 2.228159985542300 |
 
@@ -52,17 +56,19 @@ You can tweak the query on the last line of the includes.php file if you want to
 
 | Test Type	| Peak Memory Usage (Bytes) (1K Records) |
 | --------- | -------------------------------------- |
-| php_array	| 1572864 |
-| json_string	| 786432 |
-| compressed_string_level_1	| 1310720 |
-| compressed_string_level_6	| 1310720 |
+| php_array	| 1,572,864 |
+| json_string	| 786,432 |
+| compressed_string_level_1	| 1,310,720 |
+| compressed_string_level_6	| 1,310,720 |
 
 | Test Type	| Peak Memory Usage (Bytes) (100K Records) |
 | --------- | -------------------------------------- |
-| php_array	| 118226944 |
-| json_string	| 17301504 |
-| compressed_string_level_1	| 4718592 |
-| compressed_string_level_6	| 4194304 |
+| php_array	| 118,226,944 |
+| json_string	| 17,301,504 |
+| gzencode_json_string_level_1	| 34,865,152 |
+| gzencode_json_string_level_6	| 34,865,152 |
+| compressed_string_level_1	| 4,718,592 |
+| compressed_string_level_6	| 4,194,304 |
 
 ### Normalized Execution Times:
 
@@ -83,6 +89,8 @@ In real-world time, if you look at the data further above the actual extra time 
 | --------- | --------------------------------------
 | php_array	| 1 |
 | json_string	| 2.400124463 |
+| gzencode_json_string_level_1	| 2.89071488325 |
+| gzencode_json_string_level_6	| 3.68097972292 |
 | compressed_string_level_1	| 4.328998043 |
 | compressed_string_level_6	| 5.392692946 |
 
@@ -107,6 +115,8 @@ When dealing with a small number of records we only see a slight improvement in 
 | --------- | --------------------------------------
 | php_array	| 28.1875 |
 | json_string	| 4.125 |
+| gzencode_json_string_level_1	| 8.3125 |
+| gzencode_json_string_level_6	| 8.3125 |
 | compressed_string_level_1	| 1.125 |
 | compressed_string_level_6	| 1 |
 
